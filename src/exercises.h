@@ -9,5 +9,12 @@ void printFahrToCelsius();
 void printCelsiusToFahr();
 void printFahrToCelsiusForReverse();
 void printFahrToCelsiusFor();
+void inputToOuput();
+void countCharacters();
+void myCountCharacters();
+void countLines();
+void countAll();
+void removeSpaces();
+void replaceAll();
 
 #endif
