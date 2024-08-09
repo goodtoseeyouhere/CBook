@@ -160,11 +160,14 @@ void printOneWordPerLine(){
 	state = OUT;
 	while((c = getchar()) != EOF){
 		if(c == ' ' || c == '\t' || c == '\n'){
-			state = OUT;
+			if(state == IN){
+				putchar('\n');
+				state = OUT;
+			}
 		}
-		while(state == OUT){
+		else{
 			putchar(c);
-			break;
+			state = IN;
 		}
 	}
 }
