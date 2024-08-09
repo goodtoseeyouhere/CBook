@@ -114,15 +114,57 @@ void removeSpaces(){ // 1-9
 	}
 }
 
-void replaceAll(){ // 1-10
-	int c;
-	while((c = getchar()) != EOF){
-		if(c == '\b'){
-            putchar('/');
+void replaceAll() {
+    int c;
+    while ((c = getchar()) != EOF) {
+        if (c == '\t') {
+            putchar('\\');
+            putchar('t');
+        } else if (c == '\n') {
+            putchar('\\');
+            putchar('n');
+        } else if (c == '\b') {
+            putchar('\\');
             putchar('b');
+        } else if (c == '\\') {
+            putchar('\\');
+            putchar('\\');
+        } else {
+            putchar(c);
+        }
+    }
+}
+
+void countAllWords(){ // from book
+	int c, nc, nw, nl, state;
+	state = OUT;
+	nc = nw = nl = 0;
+	while((c = getchar()) != EOF){
+		nc++;
+		if(c == '\n'){
+			nl++;
 		}
-		else{
+		if(c == ' ' || c == '\t' || c == '\n'){
+			state = OUT;
+		}
+		else if(state == OUT){
+			state = IN;
+			nw++;
+		}
+	}
+	printf("%d %d %d", nc, nl, nw);
+}
+
+void printOneWordPerLine(){
+	int c, state;
+	state = OUT;
+	while((c = getchar()) != EOF){
+		if(c == ' ' || c == '\t' || c == '\n'){
+			state = OUT;
+		}
+		while(state == OUT){
 			putchar(c);
+			break;
 		}
 	}
 }
