@@ -4,8 +4,9 @@
 
 int main(void) {
 	setvbuf(stdout, NULL, _IONBF, 0);
-	printOneWordPerLine();
+	void printTheLongestInputLine();
 	return 0;
+
 
 }
 

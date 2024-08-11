@@ -6,6 +6,7 @@
 #define UPPER 300
 #define STEP 20
 #define IN 1
+#define MAXLINE 1000
 
 void printFahrToCelsius();
 void printCelsiusToFahr();
@@ -20,6 +21,10 @@ void removeSpaces();
 void replaceAll();
 void countAllWords();
 void printOneWordPerLine();
+void countDigitsWhiteSpaceOthers();
+void myCopy(char to[], char from[]);
+int myGetLine(char s[], int lim);
+void printTheLongestInputLine();
 
 
 #endif

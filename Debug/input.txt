@@ -1,4 +1,3 @@
-Hello	World
-Backspace
-\b
-\\
+Esta é a primeira linha.
+Esta é a segunda linha, que é um pouco mais longa.
+E esta é a terceira linha, que é a mais longa de todas.
