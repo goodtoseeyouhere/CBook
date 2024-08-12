@@ -7,11 +7,13 @@
 int main(void) {
 	setvbuf(stdout, NULL, _IONBF, 0);
 
-	char str[] = "ABC";
-	toLower(str);
-	printf("%s", str);
-	toUpper(str);
-	printf("%s", str);
-    return 0;
+	char str[] = "ACCBCCC";
+	char str0[] = "BA";
+	int a = any(str, str0);
+	printf("%d", a);
+
+
+
+	return 0;
 }
 
